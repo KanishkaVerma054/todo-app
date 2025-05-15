@@ -34,7 +34,7 @@ jobs:
           PAT: ${{ secrets.PAT }}
         run: |
           git clone https://github.com/KanishkaVerma054/staging-ops.git
-          cd argo-deployment
+          cd staging-ops
 
           sed -i 's|image: kanishka054/todo-app:.*|image: kanishka054/todo-app:${{ github.sha }}|' manifest.yml
 
